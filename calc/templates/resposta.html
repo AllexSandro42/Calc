@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Resultado{% endblock %}
+
+{% block conteudo %}
+    {% if op == "soma" : %}
+        <center>
+            <h1>Resultado da soma</h1>
+            {{p1}} + {{p2}} = {{res}}
+        </center>
+    {% endif %}
+
+    {% if op == "subtração" : %}
+        <center>
+            <h1>Resultado da subtração</h1>
+            {{min}} - {{sub}} = {{res}}
+        </center>
+    {% endif %}
+
+    {% if op == "multiplicação" : %}
+        <center>
+            <h1>Resultado da multiplicação</h1>
+            {{multn}} x {{multr}} = {{res}}
+        </center>
+    {% endif %}
+
+    {% if op == "divisão" : %}
+        <center>
+            <h1>Resultado da divisão</h1>
+            {{divd}} : {{divs}} = {{quo}}
+        </center>
+    {% endif %}
+
+    {% if op == "2grau" : %}
+        <center>
+            <h1>Resultado da equação</h1>
+            Delta = {{delta}}<br>
+            x1 = {{x1}}<br>
+            x2 = {{x2}}<br>
+        </center>
+    {% endif %}
+{% endblock %}

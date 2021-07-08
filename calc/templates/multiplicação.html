@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Soma{% endblock %}
+
+{% block conteudo %}
+    <form action="/multiplicar" method="POST" class="row g-3" >
+        <div class="col-md-4">
+            <input class="form-control" type="text" name="multn" placeholder="Multiplicando" required>
+            <input class="form-control" type="text" name="multr" placeholder="Multiplicador" required>
+            <input class="form-control" type="submit" value="Calc" role="button">
+        </div>
+    </form>
+{% endblock %}

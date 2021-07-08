@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Equação de 2° Grau{% endblock %}
+
+{% block conteudo %}
+    <form action="/grau" method="POST" class="row g-3" >
+        <div class="col-md-4">
+            <input class="form-control" type="text" name="a" placeholder="Valor de a" required>
+            <input class="form-control" type="text" name="b" placeholder="Valor de b" required>
+            <input class="form-control" type="text" name="c" placeholder="Valor de c" required>
+            <input class="form-control" type="submit" value="Calc" role="button">
+        </div>
+    </form>
+{% endblock %}
