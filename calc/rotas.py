@@ -78,5 +78,26 @@ def grau():
 
         return render_template('resposta.html', op=op, delta=delta, x1=x1, x2=x2)
 
+@app.route('/teorema', methods=['GET', 'POST'])
+def teorema():
+    if request.method == 'GET':
+        return render_template('teorema.html')
 
+    elif request.method == 'POST':
+        cat1 = request.form['cat1']
+        cat2 = request.form['cat2']
+        hipo = request.form['hipo']
+
+        op = "teorema"
+
+        if hipo == "":
+            x = math.pow((float(cat1)**2) + (float(cat2)**2),1/2)
+
+        elif cat1 == "":
+            x = math.pow((float(hipo)**2)-(float(cat2)**2),1/2)
+
+        elif cat2 == "":
+            x = math.pow((float(hipo)**2)-(float(cat1)**2),1/2)
+
+        return render_template('resposta.html', op=op, x=x)
 

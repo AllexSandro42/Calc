@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+
+{% block titulo %}Teorema de Pitagoras{% endblock %}
+
+{% block conteudo %}
+<form action="/teorema" method="POST" class="row g-3" >
+    <div class="col-md-4">
+        <input class="form-control" type="text" name="cat1" placeholder="Cateto 1" value="">
+        <input class="form-control" type="text" name="cat2" placeholder="Cateto 2" value="">
+        <input class="form-control" type="text" name="hipo" placeholder="Hipotenusa" valuer="">
+        <input class="form-control" type="submit" value="Calc" role="button">
+    </div>
+</form>
+<center>
+    <font color="red">
+        <p>Atenção: A caixa vazia será considerada como o "X".</p>
+    </font>
+</center> 
+{% endblock %}
